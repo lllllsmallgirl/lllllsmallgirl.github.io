@@ -1,2 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Miles的博客</title><link>https://lllllsmallgirl.github.io</link><description>记录工作和学习中遇到的问题，方便复盘</description><copyright>Miles的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/70518807?v=4</url><title>avatar</title><link>https://lllllsmallgirl.github.io</link></image><lastBuildDate>Fri, 21 Jun 2024 07:57:16 +0000</lastBuildDate><managingEditor>Miles的博客</managingEditor><ttl>60</ttl><webMaster>Miles的博客</webMaster><item><title>blog测试</title><link>https://lllllsmallgirl.github.io/post/blog-ce-shi.html</link><description>This is a test page~。</description><guid isPermaLink="true">https://lllllsmallgirl.github.io/post/blog-ce-shi.html</guid><pubDate>Fri, 21 Jun 2024 07:46:46 +0000</pubDate></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Miles的博客</title><link>https://lllllsmallgirl.github.io</link><description>记录工作和学习中遇到的问题，方便复盘</description><copyright>Miles的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/70518807?v=4</url><title>avatar</title><link>https://lllllsmallgirl.github.io</link></image><lastBuildDate>Tue, 25 Jun 2024 00:56:02 +0000</lastBuildDate><managingEditor>Miles的博客</managingEditor><ttl>60</ttl><webMaster>Miles的博客</webMaster><item><title>视频画中画</title><link>https://lllllsmallgirl.github.io/post/shi-pin-hua-zhong-hua.html</link><description>## 视频画中画（Picture-in-Picture）&#13;
+&#13;
+在项目中，遇到这样一个需求：&#13;
+&#13;
+实现类似b站视频播放的效果，即视频点击播放后，页面向下滚动至视频盒子消失在浏览器视口时，自动弹出画中画效果，当页面向上滚动至视频盒子出现在视口时，取消画中画效果&#13;
+&#13;
+&#13;
+经过调查，发现一套浏览器自带的画中画API，&#13;
+```js&#13;
+// 进入画中画&#13;
+video.requestPictureInPicture();&#13;
+// 退出画中画&#13;
+document.exitPictureInPicture();&#13;
+```&#13;
+于是尝试进行使用，测试了一下发现第一次使用完全ok，但是页面向上滚动恢复原视频盒子后，再次向下滚动页面就无法触发画中画的开启，并且控制台报错：NotAllowedError: Must be handling a user gesture to request picture in picture. &#13;
+&#13;
+经过调查，发现出现这个问题的原因如下：&#13;
+&#13;
+该API规定只有用户与页面交互后，才能触发，有点类似视频自动播放无法开启音量  &#13;
+scroll也就是滚动事件并不是浏览器认为的**被用户信任的事件**（不算与页面产生交互），而点击事件是。</description><guid isPermaLink="true">https://lllllsmallgirl.github.io/post/shi-pin-hua-zhong-hua.html</guid><pubDate>Tue, 25 Jun 2024 00:55:34 +0000</pubDate></item><item><title>blog测试</title><link>https://lllllsmallgirl.github.io/post/blog-ce-shi.html</link><description>This is a test page~。</description><guid isPermaLink="true">https://lllllsmallgirl.github.io/post/blog-ce-shi.html</guid><pubDate>Fri, 21 Jun 2024 07:46:46 +0000</pubDate></item></channel></rss>
