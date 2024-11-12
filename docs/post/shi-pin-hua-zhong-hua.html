@@ -24,7 +24,9 @@ video.requestPictureInPicture();
 // 退出画中画
 document.exitPictureInPicture();
 ```
-于是尝试进行使用，测试了一下发现第一次使用完全ok，但是页面向上滚动恢复原视频盒子后，再次向下滚动页面就无法触发画中画的开启，并且控制台报错：NotAllowedError: Must be handling a user gesture to request picture in picture. 
+于是尝试进行使用，测试了一下发现第一次使用完全ok，
+
+**问题**：页面向上滚动恢复原视频盒子后，再次向下滚动页面就无法触发画中画的开启，并且控制台报错：NotAllowedError: Must be handling a user gesture to request picture in picture. 
 
 经过调查，发现出现这个问题的原因如下：
 
@@ -45,7 +47,9 @@ video.requestPictureInPicture();
 // 退出画中画
 document.exitPictureInPicture();
 ```
-于是尝试进行使用，测试了一下发现第一次使用完全ok，但是页面向上滚动恢复原视频盒子后，再次向下滚动页面就无法触发画中画的开启，并且控制台报错：NotAllowedError: Must be handling a user gesture to request picture in picture. 
+于是尝试进行使用，测试了一下发现第一次使用完全ok，
+
+**问题**：页面向上滚动恢复原视频盒子后，再次向下滚动页面就无法触发画中画的开启，并且控制台报错：NotAllowedError: Must be handling a user gesture to request picture in picture. 
 
 经过调查，发现出现这个问题的原因如下：
 
@@ -129,7 +133,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-s1">video</span><span class="pl-kos">.</span><span class="pl-en">requestPictureInPicture</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span>
 <span class="pl-c">// 退出画中画</span>
 <span class="pl-smi">document</span><span class="pl-kos">.</span><span class="pl-en">exitPictureInPicture</span><span class="pl-kos">(</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>
-<p>于是尝试进行使用，测试了一下发现第一次使用完全ok，但是页面向上滚动恢复原视频盒子后，再次向下滚动页面就无法触发画中画的开启，并且控制台报错：NotAllowedError: Must be handling a user gesture to request picture in picture.</p>
+<p>于是尝试进行使用，测试了一下发现第一次使用完全ok，</p>
+<p><strong>问题</strong>：页面向上滚动恢复原视频盒子后，再次向下滚动页面就无法触发画中画的开启，并且控制台报错：NotAllowedError: Must be handling a user gesture to request picture in picture.</p>
 <p>经过调查，发现出现这个问题的原因如下：</p>
 <p>该API规定只有用户与页面交互后，才能触发，有点类似视频自动播放无法开启音量<br>
 scroll也就是滚动事件并不是浏览器认为的<strong>被用户信任的事件</strong>（不算与页面产生交互），而点击事件是。所以这也就解释了为什么第一次可以正常触发画中画API（因为播放视频需要点击开始播放按钮），而第二次用户没有任何操作，只是单纯的滚动鼠标滚轮，所以无法触发第二次</p>
