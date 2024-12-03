@@ -1,5 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Miles的博客</title><link>https://lllllsmallgirl.github.io</link><description>记录工作和学习中遇到的问题，方便复盘</description><copyright>Miles的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/70518807?v=4</url><title>avatar</title><link>https://lllllsmallgirl.github.io</link></image><lastBuildDate>Sat, 30 Nov 2024 11:52:14 +0000</lastBuildDate><managingEditor>Miles的博客</managingEditor><ttl>60</ttl><webMaster>Miles的博客</webMaster><item><title>初识Nuxt-echarts</title><link>https://lllllsmallgirl.github.io/post/chu-shi-Nuxt-echarts.html</link><description>## Nuxt Echarts&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Miles的博客</title><link>https://lllllsmallgirl.github.io</link><description>记录工作和学习中遇到的问题，方便复盘</description><copyright>Miles的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/70518807?v=4</url><title>avatar</title><link>https://lllllsmallgirl.github.io</link></image><lastBuildDate>Tue, 03 Dec 2024 13:44:09 +0000</lastBuildDate><managingEditor>Miles的博客</managingEditor><ttl>60</ttl><webMaster>Miles的博客</webMaster><item><title>Nuxt-color-mode</title><link>https://lllllsmallgirl.github.io/post/Nuxt-color-mode.html</link><description>## Nuxt-Color-Mode&#13;
+这是nuxt的一个亮暗主题切换的库&#13;
+&#13;
+### 使用方法：&#13;
+参考：https://color-mode.nuxtjs.org/&#13;
+&#13;
+个人配置如下：&#13;
+1. 其中在nuxt.config.ts中配置的 classSuffix: '' , 这是使用class的类名后缀&#13;
+比如后缀为空就是：dark: bg-slate-900； 后缀为 '-mode' 就是：dark-mode: bg-slate-900&#13;
+2. 在tailwindcss.config.js里，添加  darkMode: 'class',&#13;
+。</description><guid isPermaLink="true">https://lllllsmallgirl.github.io/post/Nuxt-color-mode.html</guid><pubDate>Tue, 03 Dec 2024 13:43:39 +0000</pubDate></item><item><title>初识Nuxt-echarts</title><link>https://lllllsmallgirl.github.io/post/chu-shi-Nuxt-echarts.html</link><description>## Nuxt Echarts&#13;
 &#13;
 echarts专门为nuxt开发了一个库，需要引用和配置&#13;
 &#13;
