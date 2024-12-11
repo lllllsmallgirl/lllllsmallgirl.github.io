@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Miles的博客</title><link>https://lllllsmallgirl.github.io</link><description>记录工作和学习中遇到的问题，方便复盘</description><copyright>Miles的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/70518807?v=4</url><title>avatar</title><link>https://lllllsmallgirl.github.io</link></image><lastBuildDate>Wed, 11 Dec 2024 03:14:43 +0000</lastBuildDate><managingEditor>Miles的博客</managingEditor><ttl>60</ttl><webMaster>Miles的博客</webMaster><item><title>记录创建vue3的历程</title><link>https://lllllsmallgirl.github.io/post/ji-lu-chuang-jian-vue3-de-li-cheng.html</link><description>## vue3&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Miles的博客</title><link>https://lllllsmallgirl.github.io</link><description>记录工作和学习中遇到的问题，方便复盘</description><copyright>Miles的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/70518807?v=4</url><title>avatar</title><link>https://lllllsmallgirl.github.io</link></image><lastBuildDate>Wed, 11 Dec 2024 07:17:27 +0000</lastBuildDate><managingEditor>Miles的博客</managingEditor><ttl>60</ttl><webMaster>Miles的博客</webMaster><item><title>记录创建vue3的历程</title><link>https://lllllsmallgirl.github.io/post/ji-lu-chuang-jian-vue3-de-li-cheng.html</link><description>## vue3&#13;
 &#13;
 ### 前言：&#13;
 使用了nuxt框架后，觉得应该学习一下基本vue3的项目，可以接一些简单的vue3项目&#13;
@@ -44,6 +44,14 @@ declare module '*.vue' {&#13;
 ```&#13;
 &#13;
 &#13;
+### 引入iconify&#13;
+参考：https://iconify.design/docs/usage/css/tailwind/&#13;
+需要在开发环境引入以下两个库，都要安装，第一个在文档中没写&#13;
+```js&#13;
+    '@iconify-json/uil': '^1.2.1',&#13;
+    '@iconify/tailwind': '^1.2.0',&#13;
+```&#13;
+第一个库需要什么就安装什么，看后缀，不然全部安装的话感觉会很大，有120mb&#13;
 &#13;
 &#13;
 &#13;

@@ -43,6 +43,14 @@ declare module "*.vue" {
 ```
 
 
+### 引入iconify
+参考：https://iconify.design/docs/usage/css/tailwind/
+需要在开发环境引入以下两个库，都要安装，第一个在文档中没写
+```js
+    "@iconify-json/uil": "^1.2.1",
+    "@iconify/tailwind": "^1.2.0",
+```
+第一个库需要什么就安装什么，看后缀，不然全部安装的话感觉会很大，有120mb
 
 
 
