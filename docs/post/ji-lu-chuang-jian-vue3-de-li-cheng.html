@@ -65,8 +65,44 @@ declare module '*.vue' {
 第一个库需要什么就安装什么，看后缀，不然全部安装的话感觉会很大，有120mb
 
 
+### 引入shadcn-vue
+参考：https://www.shadcn-vue.com/docs/installation/vite.html
 
 
+### 路由
+useRouter和useRoute
+useRouter用于导航操作，比如跳转等
+useRoute用于获取当前路由状态，用于获取params，query等
+
+监听路由变化：利用watch
+```
+   // 监听路由变化
+    watch(
+      () => route.path, // 监听 path 属性
+      (newPath, oldPath) => {
+        console.log(`路由从 ${oldPath} 变为 ${newPath}`);
+        routePath.value = newPath; // 更新路径
+      }
+    );
+
+    // 监听路由的 params 变化
+    watch(
+      () => route.params,
+      (newParams, oldParams) => {
+        console.log('路由参数变化：', newParams, oldParams);
+      },
+      { deep: true } // 深度监听，确保子属性变化也被捕获
+    );
+
+    // 监听路由的 query 变化
+    watch(
+      () => route.query,
+      (newQuery, oldQuery) => {
+        console.log('路由查询参数变化：', newQuery, oldQuery);
+      }
+    );
+
+```
 
 
 
@@ -127,8 +163,44 @@ declare module '*.vue' {
 第一个库需要什么就安装什么，看后缀，不然全部安装的话感觉会很大，有120mb
 
 
+### 引入shadcn-vue
+参考：https://www.shadcn-vue.com/docs/installation/vite.html
 
 
+### 路由
+useRouter和useRoute
+useRouter用于导航操作，比如跳转等
+useRoute用于获取当前路由状态，用于获取params，query等
+
+监听路由变化：利用watch
+```
+   // 监听路由变化
+    watch(
+      () => route.path, // 监听 path 属性
+      (newPath, oldPath) => {
+        console.log(`路由从 ${oldPath} 变为 ${newPath}`);
+        routePath.value = newPath; // 更新路径
+      }
+    );
+
+    // 监听路由的 params 变化
+    watch(
+      () => route.params,
+      (newParams, oldParams) => {
+        console.log('路由参数变化：', newParams, oldParams);
+      },
+      { deep: true } // 深度监听，确保子属性变化也被捕获
+    );
+
+    // 监听路由的 query 变化
+    watch(
+      () => route.query,
+      (newQuery, oldQuery) => {
+        console.log('路由查询参数变化：', newQuery, oldQuery);
+      }
+    );
+
+```
 
 
 
@@ -236,7 +308,41 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 需要在开发环境引入以下两个库，都要安装，第一个在文档中没写</p>
 <div class="highlight highlight-source-js"><pre class="notranslate">    <span class="pl-s">"@iconify-json/uil"</span>: <span class="pl-s">"^1.2.1"</span><span class="pl-kos">,</span>
     <span class="pl-s">"@iconify/tailwind"</span>: <span class="pl-s">"^1.2.0"</span><span class="pl-kos">,</span></pre></div>
-<p>第一个库需要什么就安装什么，看后缀，不然全部安装的话感觉会很大，有120mb</p></div>
+<p>第一个库需要什么就安装什么，看后缀，不然全部安装的话感觉会很大，有120mb</p>
+<h3>引入shadcn-vue</h3>
+<p>参考：<a href="https://www.shadcn-vue.com/docs/installation/vite.html" rel="nofollow">https://www.shadcn-vue.com/docs/installation/vite.html</a></p>
+<h3>路由</h3>
+<p>useRouter和useRoute<br>
+useRouter用于导航操作，比如跳转等<br>
+useRoute用于获取当前路由状态，用于获取params，query等</p>
+<p>监听路由变化：利用watch</p>
+<pre class="notranslate"><code class="notranslate">   // 监听路由变化
+    watch(
+      () =&gt; route.path, // 监听 path 属性
+      (newPath, oldPath) =&gt; {
+        console.log(`路由从 ${oldPath} 变为 ${newPath}`);
+        routePath.value = newPath; // 更新路径
+      }
+    );
+
+    // 监听路由的 params 变化
+    watch(
+      () =&gt; route.params,
+      (newParams, oldParams) =&gt; {
+        console.log('路由参数变化：', newParams, oldParams);
+      },
+      { deep: true } // 深度监听，确保子属性变化也被捕获
+    );
+
+    // 监听路由的 query 变化
+    watch(
+      () =&gt; route.query,
+      (newQuery, oldQuery) =&gt; {
+        console.log('路由查询参数变化：', newQuery, oldQuery);
+      }
+    );
+
+</code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

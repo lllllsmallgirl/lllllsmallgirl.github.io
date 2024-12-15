@@ -53,8 +53,44 @@ declare module "*.vue" {
 第一个库需要什么就安装什么，看后缀，不然全部安装的话感觉会很大，有120mb
 
 
+### 引入shadcn-vue
+参考：https://www.shadcn-vue.com/docs/installation/vite.html
 
 
+### 路由
+useRouter和useRoute
+useRouter用于导航操作，比如跳转等
+useRoute用于获取当前路由状态，用于获取params，query等
+
+监听路由变化：利用watch
+```
+   // 监听路由变化
+    watch(
+      () => route.path, // 监听 path 属性
+      (newPath, oldPath) => {
+        console.log(`路由从 ${oldPath} 变为 ${newPath}`);
+        routePath.value = newPath; // 更新路径
+      }
+    );
+
+    // 监听路由的 params 变化
+    watch(
+      () => route.params,
+      (newParams, oldParams) => {
+        console.log('路由参数变化：', newParams, oldParams);
+      },
+      { deep: true } // 深度监听，确保子属性变化也被捕获
+    );
+
+    // 监听路由的 query 变化
+    watch(
+      () => route.query,
+      (newQuery, oldQuery) => {
+        console.log('路由查询参数变化：', newQuery, oldQuery);
+      }
+    );
+
+```
 
 
 
